@@ -1,4 +1,5 @@
 ﻿module.exports = {
+  base:"/vue-press-notes/",
   title: '学习随笔',
   description: '可能会不定时更新的前端学习笔记',
   themeConfig: {
