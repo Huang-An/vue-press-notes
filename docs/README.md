@@ -4,7 +4,7 @@ heroImage: /logo.jpg
 actionText: 开始阅读 →
 actionLink: /core/
 features:
-  - title: 偶尔更新
+  - title: 偶尔更新 测试
     details: 渣笔陋文，不定时更新，没有干货，仅限自用。
   - title: 尽量丰富
     details: 预计应该会涉及前端开发，源码分析，服务器，数据库等相关知识
