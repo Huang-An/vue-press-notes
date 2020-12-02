@@ -1,5 +1,5 @@
 ﻿module.exports = {
-  base:"/vue-press-notes/",
+  base: '/vue-press-notes/',
   title: '学习随笔',
   description: '可能会不定时更新的前端学习笔记',
   themeConfig: {
@@ -8,7 +8,7 @@
       {
         text: '笔记',
         items: [
-          { text: 'HTML和CSS', link: '/core/html_css/01' },
+          { text: 'HTML和CSS', link: '/core/html-css/01' },
           { text: 'JavaScript', link: '/core/js/01' },
           { text: 'VUE', link: '/core/vue/01' },
           { text: '其他', link: '/core/other/01' }
@@ -22,17 +22,11 @@
         ['/core/', '前言'],
         {
           title: 'HTML和CSS',
-          children: ['/core/html_css/01']
+          children: ['/core/html-css/01', '/core/html-css/02']
         },
         {
           title: 'JavaScript',
-          children: [
-            '/core/js/01',
-            '/core/js/02',
-            '/core/js/03',
-            '/core/js/04',
-            '/core/js/05'
-          ]
+          children: ['/core/js/01', '/core/js/02', '/core/js/03', '/core/js/04', '/core/js/05']
         },
         {
           title: 'VUE',
@@ -45,4 +39,4 @@
       ]
     }
   }
-};
+}
