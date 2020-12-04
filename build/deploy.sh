@@ -10,6 +10,6 @@ git init
 git add -A
 git commit -m 'deploy'
 
-git push -f git@github.com:Huang-An/Huang-An.github.io.git master
+git push -f git@github.com/Huang-An/vue-press-notes.git:gh-pages
 
 cd -
