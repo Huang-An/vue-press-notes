@@ -1,17 +1,18 @@
 interface wsResult<T = any> {
-  msgType: string;
-  msg: string;
-  data: T;
+  msgType: string
+  msg: string
+  data: T
 }
 
 export class WsEvent {
-  // 单例
-  constructor() {
-    if (!this.instance) this.instance = new WsEvent();
-    return this.instance;
-  }
+  static instance: WsEvent
 
-  private instance!: WsEvent;
+  static getInstance() {
+    if (!WsEvent.instance) {
+      WsEvent.instance = new WsEvent()
+    }
+    return WsEvent.instance
+  }
 
   /**
    * 事件回调队列 多个时会循环执行
@@ -19,11 +20,11 @@ export class WsEvent {
   private eventQueueMap: {
     [k: string]: Array<{
       // 额外参数
-      param: any;
+      param: any
       // 事件
-      event: (data: wsResult, ...args: any) => void;
-    }>;
-  } = {};
+      event: (data: wsResult, ...args: any) => void
+    }>
+  } = {}
 
   /**
    * 事件队列添加事件
@@ -32,12 +33,12 @@ export class WsEvent {
    * @param param 额外参数
    */
   $on(key: string, event: (data: wsResult, ...args: any) => void, param?: any) {
-    if (!this.eventQueueMap[key]) this.eventQueueMap[key] = [];
+    if (!this.eventQueueMap[key]) this.eventQueueMap[key] = []
 
     this.eventQueueMap[key].push({
       event: event,
-      param: param,
-    });
+      param: param
+    })
   }
 
   /**
@@ -46,12 +47,12 @@ export class WsEvent {
    * @param event 事件
    */
   $off(key: string, event: Function) {
-    const eventQueue = this.eventQueueMap[key];
+    const eventQueue = this.eventQueueMap[key]
 
     if (eventQueue) {
       for (let i = eventQueue.length - 1; i >= 0; i--) {
         if (eventQueue[i].event === event) {
-          eventQueue.splice(i, 1);
+          eventQueue.splice(i, 1)
         }
       }
     }
@@ -62,22 +63,20 @@ export class WsEvent {
    */
   $exec(evt: MessageEvent) {
     try {
-      const result: wsResult = JSON.parse(evt.data);
-      const { msgType } = result;
-      const eventQueueKeys = Object.keys(this.eventQueueMap).filter(
-        (key) => key === msgType
-      );
+      const result: wsResult = JSON.parse(evt.data)
+      const { msgType } = result
+      const eventQueueKeys = Object.keys(this.eventQueueMap).filter(key => key === msgType)
       // 执行指定类型事件
-      eventQueueKeys.forEach((key) => {
-        const eventMap = this.eventQueueMap[key];
-        eventMap.forEach((events) => {
-          events.event(result, events.param);
-        });
-      });
+      eventQueueKeys.forEach(key => {
+        const eventMap = this.eventQueueMap[key]
+        eventMap.forEach(events => {
+          events.event(result, events.param)
+        })
+      })
     } catch (error) {
-      console.error(error);
+      console.error(error)
     }
   }
 }
 
-export default new WsEvent();
+export default WsEvent.getInstance()
