@@ -1,1 +1,1 @@
-core index
+index
