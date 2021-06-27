@@ -1,13 +1,19 @@
 {
   "name": "vue-press-notes",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "notes by vue press",
+  "author": "Huang-An",
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "serve": "vuepress dev docs",
+    "build": "vuepress build docs"
   },
   "license": "MIT",
   "devDependencies": {
-    "vuepress": "^1.7.1"
+    "merge": "^2.1.1",
+    "prettier": "^2.3.2",
+    "vuepress": "^1.8.2"
+  },
+  "dependencies": {
+    "vuepress-theme-reco": "^1.6.6"
   }
 }
