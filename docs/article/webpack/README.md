@@ -9,7 +9,7 @@ categories:
   - webpack
 ---
 
-![webpack-logo](/image/webpack-logo.jpg)
+![webpack-logo](/vue-press-notes/image/webpack-logo.jpg)
 
 <!-- more -->
 

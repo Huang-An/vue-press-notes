@@ -9,7 +9,7 @@ categories:
   - Babel
 ---
 
-![babel-logo](/image/babel-logo.png)
+![babel-logo](/vue-press-notes/image/babel-logo.png)
 
 <!-- more -->
 
@@ -35,7 +35,7 @@ Babel 构建在插件之上，代码转换功能以插件的形式出现，插�
 我们可以根据自己所需要使用的不同插件组合，创建一个自己的 preset 并将其分享出去。如：
 
 ```js
-module.exports = function() {
+module.exports = function () {
   return {
     plugins: ['pluginA', 'pluginB', 'pluginC']
   }
