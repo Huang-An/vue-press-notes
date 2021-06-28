@@ -9,7 +9,7 @@ categories:
   - Babel
 ---
 
-![babel-logo](/vue-press-notes/image/babel-logo.png)
+![babel-logo](/vue-press-notes/image/babel-logo.jpg)
 
 <!-- more -->
 

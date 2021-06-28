@@ -19,6 +19,20 @@ module.exports = {
           collapsable: false,
           children: ['', '01']
         }
+      ],
+      '/article/vue/': [
+        {
+          title: 'Vue.js',
+          collapsable: false,
+          children: ['', '01', '02', '03']
+        }
+      ],
+      '/article/network/': [
+        {
+          title: '网络通信',
+          collapsable: false,
+          children: ['', '01']
+        }
       ]
     }
   }
