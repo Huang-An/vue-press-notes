@@ -7,7 +7,7 @@ categories:
   - 网络通信
 ---
 
-![webpack-logo](/vue-press-notes/image/network-logo.jpg)
+![network-logo](/vue-press-notes/image/network-logo.jpg)
 
 <!-- more -->
 

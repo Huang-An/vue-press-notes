@@ -1,6 +1,7 @@
 ---
 title: Vue.js
 date: 2021-06-28
+sticky: 3
 tags:
   - 前端
   - Vue.js
@@ -9,7 +10,7 @@ categories:
   - Vue.js
 ---
 
-![webpack-logo](/vue-press-notes/image/vue-logo.jpg)
+![vue-logo](/vue-press-notes/image/vue-logo.jpg)
 
 <!-- more -->
 

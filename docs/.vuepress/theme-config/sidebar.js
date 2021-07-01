@@ -20,6 +20,13 @@ module.exports = {
           children: ['', '01']
         }
       ],
+      '/article/javascript/': [
+        {
+          title: 'javascript',
+          collapsable: false,
+          children: ['', '01', '02', '03']
+        }
+      ],
       '/article/vue/': [
         {
           title: 'Vue.js',

@@ -1,6 +1,7 @@
 ---
 title: Babel
 date: 2021-05-15
+sticky: 4
 tags:
   - 前端
   - Babel
